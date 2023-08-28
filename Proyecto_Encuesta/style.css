@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: sans-serif;
+    padding: 2rem 1rem;
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(51, 53, 52, 0.521);
+    z-index: -5;
+}
+
+#title, #description {
+    color: #fff;
+    text-align: center;
+}
+
+#title {
+    font-size: 2.3rem;
+}
+
+#description {
+    font-size: 1.1rem;
+}
+
+.separates {
+    margin-bottom: 1.8rem;
+}
+
+.question {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.527);
+    border-radius: 1rem;
+    padding: 1.8rem 1rem;
+    margin: 2.5rem 0;
+    max-width: 480px;
+}
+
+label, input {
+    display: block;
+}
+
+input, select, textarea {
+    font-size: inherit;
+    font-family: inherit;
+    margin: 0.3rem 0;
+    padding: 3px 8px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 1px solid #333;
+}
+
+textarea {
+    resize: none;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.input {
+    width: 100%;
+}
+
+.no-border:focus {
+    outline: none;
+}
+
+a {
+    font-weight: bold;
+    color: #111;
+    text-decoration: none;
+}
+
+a:active {
+    color: royalblue;
+    text-decoration: underline;
+}
+
+#submit {
+    display: block;
+    margin: 0 auto;
+    padding: .8rem .5rem;
+    width: 50%;
+    border-radius: 10px;
+    font-weight: bold;
+
+    background-color: rgb(83, 117, 219);
+    color: #fff;
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: royalblue;
+}
+
+@media (min-width: 1024px) {
+    
+    body {
+        padding: 2rem;
+        
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .container {
+        width: 50%;
+    }
+
+    .container:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    #title {
+        font-size: 4rem;
+    }
+    
+    #description {
+        font-size: 1.5rem;
+    }
+
+    form {
+        padding: 1.8rem 3rem;
+        margin: 0 auto;
+    }
+}

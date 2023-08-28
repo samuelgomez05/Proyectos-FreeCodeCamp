@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo Aventura - Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header" class="header container">
+        <a href="#" class="header__logo">
+            <img src="./images/logo.png" alt="Logo Turismo Aventura" id="header-img" class="header__img">
+        </a>
+        <nav id="nav-bar" class="nav-bar">
+            <ul class="nav-bar__list">
+                <li class="nav-bar__li"><a href="#destinations" id="" class="nav-link">Destinos</a></li>
+                <li class="nav-bar__li"><a href="#activities" id="" class="nav-link">Actividades</a></li>
+                <li class="nav-bar__li"><a href="#reserve" id="" class="nav-link">Reservar</a></li>
+            </ul>
+        </nav>
+        <a href="#nav-bar" class="icon-menu-open"><i class="bi bi-list"></i></a>
+        <a href="#" class="icon-menu-close"><i class="bi bi-x"></i></a>
+    </header>
+    <main class="main container">
+        <div class="container-content-main">
+            <h1 class="main__title">¡Vive la Aventura de tu Vida!</h1>
+            <p class="main__subtitle">Explora destinos emocionantes y actividades llenas de adrenalina con Turismo Aventura.</p>
+            <video src="https://player.vimeo.com/external/480116778.sd.mp4?s=9d48f62e7293e5e7cb13990d89277496476983e6&profile_id=165&oauth2_token_id=57447761" autoplay muted loop id="video" class="main__video video-mobile"></video>
+            <video src="https://player.vimeo.com/external/392931771.sd.mp4?s=fedfd41263aa9993e9e12d7c4114e418960109a2&profile_id=164&oauth2_token_id=57447761" autoplay muted loop id="video" class="main__video video-desktop"></video>
+            <form action="https://www.freecodecamp.com/email-submit" method="post" target="_blank" id="form" class="form">
+                <input type="email" id="email" class="form__input-email" name="email" pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$" placeholder="Ingresa tu email" required >
+                <input type="submit" id="submit" class="form__submit" value="Enviar">
+            </form>
+        </div>
+    </main>
+    <section class="section container" id="destinations">
+        <h2 class="section__title">Descubre Destinos Inolvidables</h2>
+        <p class="section__subtitle">Bienvenido(a) a Turismo Aventura, donde la emoción y la naturaleza se fusionan para brindarte experiencias inolvidables. Elige tu destino y déjate sorprender por la belleza y la aventura que te esperan.</p>
+        <div class="container-destinations">
+            <article class="card destination-one">
+                <figure class="card__figure">
+                    <img src="https://images.pexels.com/photos/210243/pexels-photo-210243.jpeg?auto=compress&cs=tinysrgb&w=600" class="card__img" alt="Imagen de montañas emplumadas" loading="lazy">
+                </figure>
+                <h3 class="card__title">Montañas Emplumadas</h3>
+                <p class="card__paragraph">Sumérgete en la mística belleza de las Montañas Emplumadas. Camina por senderos que te llevarán a panorámicas impresionantes y desafía tus límites conquistando picos inexplorados.</p>
+            </article>
+            <article class="card destination-two">
+                <figure class="card__figure">
+                    <img src="https://images.pexels.com/photos/4091042/pexels-photo-4091042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card__img" alt="Imagen de selva tropical" loading="lazy">
+                </figure>
+                <h3 class="card__title">Selva Esmeralda</h3>
+                <p class="card__paragraph">Adéntrate en la selva tropical más increíble. Descubre senderos escondidos, cruza puentes colgantes y maravíllate con la abundante flora y fauna que habita en este paraíso natural.</p>
+            </article>
+            <article class="card destination-three">
+                <figure class="card__figure">
+                    <img src="https://images.pexels.com/photos/1456282/pexels-photo-1456282.jpeg?auto=compress&cs=tinysrgb&w=600" class="card__img" alt="Imagen de costa de mar" loading="lazy">
+                </figure>
+                <h3 class="card__title">Costas Salvajes</h3>
+                <p class="card__paragraph">Embárcate en una aventura acuática en nuestras Costas Salvajes. Surfea las olas, bucea en arrecifes coloridos y descubre la riqueza marina de nuestras aguas cristalinas.</p>
+            </article>
+        </div>
+        <a href="#" class="section__cta">Ver más destinos</a>
+    </section>
+    <section class="section container" id="activities">
+        <h2 class="section__title">Vive la Emoción con diferentes Actividades</h2>
+        <p class="section__subtitle">En Turismo Aventura, tenemos actividades para todos los amantes de la adrenalina. Ya seas un aventurero experimentado o un principiante, nuestras emocionantes actividades te harán vivir momentos inolvidables.</p>
+        <div class="container-carousel">
+            <article class="slide slide-one">
+                <h3 class="slide__title">Rafting Extremo</h3>
+                <p class="slide__paragraph">Siente la emoción de desafiar rápidos salvajes en una experiencia de rafting única. Nuestros guías expertos te acompañarán para que disfrutes al máximo de esta aventura acuática.</p>
+            </article>
+            <article class="slide slide-two">
+                <h3 class="slide__title">Trekking Subterráneo</h3>
+                <p class="slide__paragraph">Descubre el misterio subterráneo en un trekking inolvidable. Explora impresionantes cuevas y formaciones rocosas mientras te sumerges en la belleza oculta de la tierra.</p>
+            </article>
+            <article class="slide slide-three">
+                <h3 class="slide__title">Vuelo en Parapente</h3>
+                <p class="slide__paragraph">Siente la libertad del cielo en un emocionante vuelo en parapente. Vuela como un ave sobre escenarios impresionantes y vive una experiencia única en el aire.</p>
+            </article>
+            <article class="slide slide-four">
+                <h3 class="slide__title">Ruta en Globo Aerostático</h3>
+                <p class="slide__paragraph">Eleva tu espíritu aventurero en un viaje en globo aerostático. Disfruta de vistas panorámicas inigualables mientras flotas en el aire y contemplas paisajes asombrosos.</p>
+            </article>
+            <article class="slide slide-five">
+                <h3 class="slide__title">Bungee Jumping Extremo</h3>
+                <p class="slide__paragraph">Experimenta una dosis de adrenalina extrema saltando desde altísimos puentes y plataformas. Siente la caída libre y la emoción única del bungee jumping.</p>
+            </article>
+        </div>
+        <a href="#" class="section__cta">Ver más actividades</a>
+    </section>
+    <section class="section container" id="reserve">
+        <h2 class="section__title">¿Listo para la aventura?</h2>
+        <p class="section__subtitle">Reserva ahora y vive experiencias inolvidables.</p>
+        <a href="#" class="section__cta">Reservar Ahora</a>
+    </section>
+    <footer class="footer container">
+        <ul class="footer__social-medias">
+            <li class="footer__li">
+                <a href="#" class="footer__link"><i class="bi bi-facebook"></i></a>
+            </li>
+            <li class="footer__li">
+                <a href="#" class="footer__link"><i class="bi bi-instagram"></i></a>
+            </li>
+            <li class="footer__li">
+                <a href="#" class="footer__link"><i class="bi bi-whatsapp"></i></a>
+            </li>
+        </ul>
+        <p class="footer__copyright">Copyright &copy; 2023 Turismo Aventura. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

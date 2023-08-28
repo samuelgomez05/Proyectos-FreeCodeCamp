@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology store - FreeCodeCamp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Registration for the best of technology</h1>
+        <p id="description">
+            Thank you for helping us grow
+        </p>
+    </div>
+        
+    <div class="container">
+
+        <form action="#" method="post" id="survey-form">
+            <div class="separates">
+                <label for="name" id="name-label" class="question">
+                    Name:
+                </label>
+                <input type="text" id="name" placeholder="Enter your name" required class="input">
+    
+                <label for="email" id="email-label" class="question">
+                    Email:
+                </label>
+                <input type="email" id="email"  placeholder="Enter your email" required class="input">
+    
+                <label for="number" id="number-label" class="question">
+                    Age:
+                </label>
+                <input type="number" id="number" min="18" max="90" placeholder="Age" class="input">
+            </div>
+
+            <div class="separates">
+                <p class="question">Select your country</p>
+                <select name="country" id="dropdown">
+                    <option value="#" disabled selected>Select an option</option>
+                    <option value="us">US</option>
+                    <option value="pe">Peru</option>
+                </select>
+            </div>
+
+            <div class="separates">
+            <p class="question">What is your gender?</p>
+                <input type="radio" name="gender" value="man" id="man" class="inline no-border">
+                <label for="man" class="inline">Man</label>
+                <input type="radio" name="gender" value="woman" id="woman" class="inline no-border">
+                <label for="woman" class="inline">Woman</label>
+                <input type="radio" name="gender" value="other" id="other" class="inline no-border">
+                <label for="other" class="inline">Other</label>
+            </div>
+
+            <div class="separates">
+                <input type="checkbox" id="terms_conditions" value="accept" required class="inline no-border">
+                <label for="terms_conditions" class="inline">I accept <a href="#">the terms and conditions</a></label>
+                <br>
+                <input type="checkbox" id="latest_news" value="yes, I want to receive" class="inline no-border">
+                <label for="latest_news" class="inline">I want to receive the latest news</label>
+            </div>
+
+            <div class="separates">
+                <label for="comment" class="question">Why are you interested in registering on our site?</label>
+                <textarea id="comment" cols="30" rows="8" class="input"></textarea>
+            </div>
+
+            <input type="submit" id="submit" value="Submit">
+        </form>
+
+    </div>
+</body>
+</html>

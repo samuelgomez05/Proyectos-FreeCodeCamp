@@ -1,0 +1,328 @@
+/* Fluid Design */
+/* @link https://utopia.fyi/type/calculator?c=375,16,1.2,1240,20,1.25,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+:root {
+    /* Step -2: 11.11px → 12.80px */
+    --step--2: clamp(0.69rem, calc(0.65rem + 0.20vw), 0.80rem);
+  
+    /* Step -1: 13.33px → 16.00px */
+    --step--1: clamp(0.83rem, calc(0.76rem + 0.31vw), 1.00rem);
+  
+    /* Step 0: 16.00px → 20.00px */
+    --step-0: clamp(1.00rem, calc(0.89rem + 0.46vw), 1.25rem);
+  
+    /* Step 1: 19.20px → 25.00px */
+    --step-1: clamp(1.20rem, calc(1.04rem + 0.67vw), 1.56rem);
+  
+    /* Step 2: 23.04px → 31.25px */
+    --step-2: clamp(1.44rem, calc(1.22rem + 0.95vw), 1.95rem);
+  
+    /* Step 3: 27.65px → 39.06px */
+    --step-3: clamp(1.73rem, calc(1.42rem + 1.32vw), 2.44rem);
+  
+    /* Step 4: 33.18px → 48.83px */
+    --step-4: clamp(2.07rem, calc(1.65rem + 1.81vw), 3.05rem);
+  
+    /* Step 5: 39.81px → 61.04px */
+    --step-5: clamp(2.49rem, calc(1.91rem + 2.45vw), 3.82rem);
+  
+    /* Step 6: 47.78px → 76.29px */
+    --step-6: clamp(2.99rem, calc(2.21rem + 3.30vw), 4.77rem);
+
+    --color-text: #e8e8e9;
+    --color-subtext: #bbbbbd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--step-0);
+    color: var(--color-text);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    height: 4rem;
+    background-color: #343436;
+    box-shadow: 0 3px 15px -10px #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.nav {
+    width: inherit;
+    height: inherit;
+}
+
+.nav__list {
+    width: inherit;
+    height: inherit;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav__li {
+    height: inherit;
+}
+
+.nav__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    padding: 0 1rem;
+    color: inherit;
+    transition: background-color .3s ease;
+}
+
+.nav__link:hover {
+    background-color: #606063;
+}
+
+/* SECTION WELCOME */
+.section-welcome {
+    width: 100%;
+    height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+.section-welcome__title {
+    font-size: var(--step-6);
+}
+
+.section-welcome__paragraph {
+    font-size: var(--step-2);
+    color: var(--color-subtext);
+    text-shadow: 2px 2px 1px #1f1f1f;
+}
+
+.section-welcome__arrow {
+    font-size: 2rem;
+    color: inherit;
+    animation-name: moverFlecha;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes moverFlecha {
+    from {
+        transform: translateY(50%) scaleY(.9);
+        color: var(--color-subtext);
+    }
+
+    to {
+        transform: translateY(150%) scaleY(1.05);
+    }
+}
+
+/* SECTIONS */
+.section {
+    padding: 4rem 1rem;
+    scroll-margin-top: 2rem;
+}
+
+.section__title {
+    font-size: var(--step-4);
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.section__title--dark {
+    color: #3b3b3c;
+}
+
+/* SECTION PROJECTS */
+.section-proyects {
+    background-color: #f0f0f0;
+}
+
+.container-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(calc(400px - 2rem), 100%), 1fr));
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-tile {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #333;
+    border-radius: .3rem;
+    background-color: #fff;
+    box-shadow: 0 0 15px -5px #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-title {
+    color: #2d2d2e;
+    font-size: var(--step-1);
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.project__figure {
+    width: 100%;
+}
+
+.project__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project__container-link {
+    background-color: #00000099;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform .5s ease;
+}
+
+.project-tile:hover .project__container-link {
+    transform: translateY(0);
+}
+
+.project__link {
+    font-size: 1.5rem;
+    color: inherit;
+    display: flex;
+    gap: 1rem;
+}
+
+.project__link i {
+    transition: transform .2s ease;
+}
+
+.project__link:hover {
+    text-decoration: underline;
+}
+
+.project__link:hover i {
+    transform: translate(3px, -3px);
+}
+
+/* SECTION CONTACT ME */
+.section-contact {
+    background-color: #282829;
+}
+
+.section-contact__container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.section-contact__link {
+    padding: .5rem 2rem;
+    color: var(--color-subtext);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    position: relative;
+    overflow: hidden;
+    transition: color .3s ease;
+}
+
+.section-contact__link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: translateX(-200%);
+    transition: transform .3s ease;
+}
+
+.section-contact__link:hover {
+    color: #fff;
+}
+
+.section-contact__link:hover::after {
+    transform: translateX(0);
+}
+
+.section-contact__link i {
+    font-size: 1.5rem;
+}
+
+/* FOOTER */
+.footer {
+    padding: 1rem;
+    background-color: #282829;
+    border-top: 3px solid #000;
+}
+
+.footer__paragraph {
+    font-size: var(--step--1);
+    color: var(--color-subtext);
+    text-align: center;
+    line-height: 1.5;
+}
+
+.footer__link {
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.footer__link:hover {
+    color: #fa8072;
+}
+
+@media screen and (min-width: 768px) {
+    /* HEADER */
+    .nav__link {
+        padding: 0 2rem;
+    }
+
+    /* SECTION WELCOME */
+    .section-welcome {
+        padding: 2rem;
+    }
+
+    /* FOOTER */
+    .footer {
+        padding: 1rem 2rem;
+    }
+}
